@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_it_intervention_tree" model="ir.ui.view">
+        <field name="name">it.intervention.tree</field>
+        <field name="model">it.intervention</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="intervention_date"/>
+                <field name="asset_id"/>
+                <field name="technician_id"/>
+                <field name="state"/>
+                <field name="priority"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_it_intervention_form" model="ir.ui.view">
+        <field name="name">it.intervention.form</field>
+        <field name="model">it.intervention</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="intervention_date"/>
+                        <field name="asset_id"/>
+                        <field name="technician_id"/>
+                        <field name="state"/>
+                        <field name="priority"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_it_intervention_kanban" model="ir.ui.view">
+        <field name="name">it.intervention.kanban</field>
+        <field name="model">it.intervention</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state">
+                <field name="name"/>
+                <field name="intervention_date"/>
+                <field name="asset_id"/>
+                <field name="technician_id"/>
+                <field name="state"/>
+                <field name="priority"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <strong><field name="name"/></strong><br/>
+                                <field name="asset_id"/><br/>
+                                <field name="technician_id"/><br/>
+                                Priorité: <field name="priority"/><br/>
+                                Date: <field name="intervention_date"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="action_it_intervention" model="ir.actions.act_window">
+        <field name="name">Interventions</field>
+        <field name="res_model">it.intervention</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+</odoo>

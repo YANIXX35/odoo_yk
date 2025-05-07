@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_it_technician_tree" model="ir.ui.view">
+        <field name="name">it.technician.tree</field>
+        <field name="model">it.technician</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="skill_level"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_it_technician_form" model="ir.ui.view">
+        <field name="name">it.technician.form</field>
+        <field name="model">it.technician</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="skill_level"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_it_technician" model="ir.actions.act_window">
+        <field name="name">Techniciens</field>
+        <field name="res_model">it.technician</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

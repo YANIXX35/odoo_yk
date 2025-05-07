@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="main_it_menu" name="Gestion de parc informatique" sequence="10"/>
+
+    <menuitem id="resources_menu" name="Gestion des ressources" parent="main_it_menu" sequence="10"/>
+    <menuitem id="it_asset_menu" name="Équipements" parent="resources_menu" action="it_asset_action" sequence="10"/>
+    <menuitem id="software_license_menu" name="Licences logicielles" parent="resources_menu" action="software_license_action" sequence="20"/>
+    <menuitem id="technician_menu" name="Techniciens" parent="resources_menu" action="action_it_technician" sequence="30"/>
+    <menuitem id="asset_category_menu" name="Catégories d'équipements" parent="resources_menu" action="action_it_asset_category" sequence="40"/>
+    <menuitem id="location_menu" name="Lieux" parent="resources_menu" action="action_it_location" sequence="50"/>
+
+    <menuitem id="operations_menu" name="Opérations" parent="main_it_menu" sequence="20"/>
+    <menuitem id="maintenance_contract_menu" name="Contrats de maintenance" parent="operations_menu" action="maintenance_contract_action" sequence="10"/>
+    <menuitem id="intervention_menu" name="Interventions" parent="operations_menu" action="action_it_intervention" sequence="20"/>
+    <menuitem id="ticket_menu" name="Tickets d'assistance" parent="operations_menu" action="action_it_ticket" sequence="30"/>
+</odoo>

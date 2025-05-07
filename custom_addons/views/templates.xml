@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="asset_list">
+            <t t-name="it_asset_management.asset_list">
+                <ul>
+                    <li t-foreach="assets" t-as="asset">
+                        <a t-attf-href="/it_asset_management/asset/#{asset.id}"><t t-esc="asset.name"/></a>
+                    </li>
+                </ul>
+            </t>
+        </template>
+    </data>
+</odoo>

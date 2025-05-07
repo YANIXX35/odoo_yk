@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_it_asset,Access IT Asset,model_it_asset,,1,1,1,0
+access_software_license,Access Software License,model_software_license,,1,1,1,0
+access_maintenance_contract,Access Maintenance Contract,model_maintenance_contract,,1,1,1,0
+access_it_technician,Access IT Technician,model_it_technician,,1,1,1,0
+access_it_asset_category,Access IT Asset Category,model_it_asset_category,,1,1,1,0
+access_it_location,Access IT Location,model_it_location,,1,1,1,0
+access_it_intervention,Access IT Intervention,model_it_intervention,,1,1,1,0
+access_it_ticket,Access IT Ticket,model_it_ticket,,1,1,1,0

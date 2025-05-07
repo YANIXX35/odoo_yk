@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="software_license_form_view">
+        <field name="name">software.license.form</field>
+        <field name="model">software.license</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="license_key"/>
+                        <field name="expiration_date"/>
+                        <field name="seats"/>
+                        <field name="customer_id"/>
+                        <field name="active"/>
+                    </group>
+                    <notebook>
+                        <page string="Notes">
+                            <field name="notes"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="software_license_tree_view">
+        <field name="name">software.license.tree</field>
+        <field name="model">software.license</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="license_key"/>
+                <field name="expiration_date"/>
+                <field name="seats"/>
+                <field name="customer_id"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="software_license_action">
+        <field name="name">Licences logicielles</field>
+        <field name="res_model">software.license</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
